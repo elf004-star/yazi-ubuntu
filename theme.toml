@@ -1,0 +1,5 @@
+# theme.toml
+
+[flavor]
+dark = "tokyonight-night"
+light = "tokyonight-night"
