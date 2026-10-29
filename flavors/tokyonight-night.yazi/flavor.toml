@@ -2,12 +2,10 @@
 
 # : Manager {{{
 
-[manager]
+[mgr]
 cwd = { fg = "#a9b1d6", italic = true }
 
 # Hovered
-hovered         = { bg = "#292e42" }
-preview_hovered = { bg = "#292e42" }
 
 # Find
 find_keyword  = { fg = "#16161e", bg = "#ff9e64", bold = true }
@@ -20,9 +18,6 @@ marker_marked   = { fg = "#bb9af7", bg = "#bb9af7" }
 marker_selected = { fg = "#7aa2f7", bg = "#7aa2f7" }
 
 # Tab
-tab_active   = { fg = "#c0caf5", bg = "#292e42" }
-tab_inactive = { fg = "#3b4261", bg = "#1a1b26" }
-tab_width    = 1
 
 # Count
 count_copied   = { fg = "#c0caf5", bg = "#41a6b5" }
@@ -63,8 +58,8 @@ unset_alt   = { fg = "#9d7cd8", bg = "#3b4261" }
 # : Status bar {{{
 
 [status]
-separator_open    = ""
-separator_close   = ""
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
 
 # Progress
 progress_label  = { fg = "#a9b1d6", bold = true }
@@ -104,7 +99,7 @@ selected = { bg = "#283457" }
 
 # : Completion {{{
 
-[completion]
+[cmp]
 border   = { fg = "#0db9d7" }
 active   = { fg = "#c0caf5", bg = "#283457" }
 inactive = { fg = "#c0caf5" }
@@ -145,7 +140,7 @@ separator_style = { fg = "#565f89" }
 [confirm]
 border  = { fg = "#0db9d7" }
 title   = { fg = "#27a1b9" }
-content = {}
+body = {}
 list    = {}
 btn_yes = { bg = "#283457" }
 btn_no  = {}
@@ -180,10 +175,9 @@ icon_info = ""
 # : Help {{{
 
 [help]
-on      = { fg = "#9ece6a" }
-run     = { fg = "#bb9af7" }
-hovered = { bg = "#292e42" }
-footer  = { fg = "#c0caf5", bg = "#1a1b26" }
+chord      = { fg = "#9ece6a" }
+action     = { fg = "#bb9af7" }
+border  = { fg = "#c0caf5", bg = "#1a1b26" }
 
 # : }}}
 
@@ -210,11 +204,11 @@ rules = [
 	# { mime = "inode/x-empty", fg = "#f7768e" },
 
 	# Special files
-	{ name = "*", is = "orphan", bg = "#f7768e" },
-	{ name = "*", is = "exec"  , fg = "#9ece6a" },
+	{ url = "*", is = "orphan", bg = "#f7768e" },
+	{ url = "*", is = "exec"  , fg = "#9ece6a" },
 
 	# Fallback
-	{ name = "*/", fg = "#7aa2f7" }
+	{ url = "*/", fg = "#7aa2f7" }
 ]
 
 # : }}}
